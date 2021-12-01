@@ -1,4 +1,4 @@
-package com.example.ntp06.myapplx.ui;
+package com.why.tools.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.ntp06.myapplx.R;
 import com.gyf.barlibrary.ImmersionBar;
+import com.why.tools.R;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
