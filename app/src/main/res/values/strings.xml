@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">My Applx</string>
+    <string name="tv_zh">账号：</string>
+    <string name="tv_mm">密码：</string>
+    <string name="button2">注册</string>
+    <string name="button3">登录</string>
+    <string name="tv_welcome">欢迎业主们进行注册</string>
+    <string name="reg_zhang">账号：</string>
+    <string name="reg_mi">密码：</string>
+    <string name="reg_name">账户名：</string>
+    <string name="reg_phone">电话：</string>
+    <string name="reg_address">地址：</string>
+    <string name="man_welcome">欢迎管理员进行注册</string>
+    <string name="man_zhh">账号：</string>
+    <string name="man_mim">密码：</string>
+    <string name="tv_yz">业主信息如下：</string>
+    <string name="user_name">姓名：</string>
+    <string name="user_phone">电话：</string>
+    <string name="user_address">地址：</string>
+    <string name="tv_jt">家庭成员：</string>
+    <string name="btn_qi">妻子</string>
+    <string name="btn_en">儿女</string>
+    <string name="btn_lr">老人</string>
+
+</resources>
