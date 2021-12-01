@@ -1,4 +1,4 @@
-package com.example.ntp06.myapplx.view;
+package com.why.tools.view;
 
 import android.content.Context;
 import android.graphics.Canvas;

@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
 
-    <include layout="@layout/common_tool_bar" />
+    <include layout="@layout/why_tools_common_tool_bar" />
 
     <ImageView
         android:id="@+id/im_icon1"

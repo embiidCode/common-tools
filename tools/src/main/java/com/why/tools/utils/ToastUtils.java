@@ -1,4 +1,4 @@
-package com.example.ntp06.myapplx.utils;
+package com.why.tools.utils;
 
 import android.content.Context;
 import android.text.TextUtils;
