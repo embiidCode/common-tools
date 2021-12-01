@@ -108,6 +108,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     /**
      * 解决软键盘与沉浸式状态冲突
+     * 暂时还用不到
      */
     protected void setImmersionBarKeyboardEnable() {
         if (immersionBar != null) {
