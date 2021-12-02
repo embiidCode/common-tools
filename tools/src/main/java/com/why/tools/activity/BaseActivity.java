@@ -1,21 +1,16 @@
 package com.why.tools.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.gyf.barlibrary.ImmersionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.why.tools.R;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
-    /**
-     * 沉浸式状态栏
-     */
-    protected ImmersionBar immersionBar;
 
     TextView titleTv;
 
@@ -26,12 +21,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (0 != getLayoutId()) {
             ImageView backIv = findViewById(R.id.tool_bar_back);
             if (null != backIv) {
-                backIv.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        BaseActivity.super.onBackPressed();
-                    }
-                });
+                backIv.setOnClickListener(view -> BaseActivity.super.onBackPressed());
             }
 
             if(!TextUtils.isEmpty(getTitleStr())) {
@@ -100,52 +90,20 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 全屏App内容填充状态栏
      */
     protected void setFullScreenModel() {
-        immersionBar = ImmersionBar.with(this);
-        immersionBar.keyboardEnable(false)
-                .statusBarDarkFont(true, 0.2f)
-                .init();
     }
 
     /**
-     * 解决软键盘与沉浸式状态冲突
-     * 暂时还用不到
-     */
-    protected void setImmersionBarKeyboardEnable() {
-        if (immersionBar != null) {
-            immersionBar.keyboardEnable(true)
-                    .init();
-        }
-    }
-
-    /**
-     * 设置系统statusBar颜色
      *
-     * @param statusBarColor 状态栏颜色
      */
     protected void setImmersionBar(int statusBarColor) {
-        setImmersionBar(statusBarColor, false);
     }
 
-    /**
-     * 设置系统statusBar颜色
-     *
-     * @param statusBarColor 状态栏颜色
-     */
-    protected void setImmersionBar(int statusBarColor, boolean keyboardEnable) {
-        immersionBar = ImmersionBar.with(this);
-        immersionBar.statusBarColor(statusBarColor)
-                .keyboardEnable(keyboardEnable)
-                .fitsSystemWindows(true)
-                .statusBarDarkFont(true, 0.2f)
-                .init();
-    }
 
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         if (applyImmersionBar() || applyFullScreen()) {
-            if (immersionBar != null) immersionBar.destroy();
         }
     }
 
